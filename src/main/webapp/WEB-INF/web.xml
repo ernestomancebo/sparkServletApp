@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app Version="2.5" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
+	<display-name>Spark App</display-name>
+	<description>A sample Spark app on a Servlet Container</description>
+	
+	<!--
+		FILTERS
+	-->
+	<!-- User filter -->
+	<filter>
+		<filter-name>SparkFilter</filter-name>
+		<filter-class>spark.servlet.SparkFilter</filter-class>
+		<init-param>
+			<param-name>UserService</param-name>
+			<param-value>com.flectosystems.sparkapp.services.UserService</param-value>
+		</init-param>
+	</filter>
+	<!-- Filter Mapping (URLs) -->
+	<filter-mapping>
+		<filter-name>UserService</filter-name>
+		<url-pattern>/ws/user/*</url-pattern>
+	</filter-mapping>
+</web-app>
