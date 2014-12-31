@@ -3,6 +3,9 @@
 	<display-name>Spark App</display-name>
 	<description>A sample Spark app on a Servlet Container</description>
 	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 	<!--
 		FILTERS
 	-->
@@ -18,7 +21,7 @@
 	<!-- Filter Mapping (URLs) -->
 	<filter-mapping>
 		<filter-name>SparkFilter</filter-name>
-		<url-pattern>/ws/user/*</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
 </web-app>

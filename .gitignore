@@ -2,7 +2,9 @@
 *.jar
 *.war
 *.ear
+*.iml
 
 /target
 /build
 /bin
+.idea/
